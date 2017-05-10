@@ -1,7 +1,18 @@
-﻿@{
+﻿@model Website.Models.Clothing[]
+
+@{
     ViewBag.Title = "About";
 }
-<h2>@ViewBag.Title.</h2>
+
+
+<h2>@ViewBag.Title</h2>
 <h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+@foreach (var cloths in Model)
+{
+    <h1>@cloths.Id</h1>
+    <p>@cloths.Name</p>
+    <p>@cloths.Size</p>
+    <img src="~/Images/@cloths.ImageName" alt="@cloths.Name" class=" img-responsive" />
+}
+
