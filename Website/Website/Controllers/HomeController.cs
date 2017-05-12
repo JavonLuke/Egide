@@ -17,6 +17,7 @@ namespace Website.Controllers
                 Name = "First Clothing",
                 Size = "Extra Large"
             };
+            ViewBag.Information = "Hello my name is Javon I would like to know your name";
 
             return View(clothing);
         }
