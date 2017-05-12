@@ -7,13 +7,19 @@
 
 <h2>@ViewBag.Title</h2>
 <h3>@ViewBag.Message</h3>
-<p>This is the information: @ViewBag.Information</p>
+<p>This is the information: @Model.Length</p>
+<div class="container">
+    <div class="row">
+        @foreach (var cloths in Model)
+        {
+            <div class="col-sm-2">
+                <img src="~/Images/@cloths.ImageName" alt="@cloths.Name" class=" img-responsive" />
+                <h1>@cloths.Id</h1>
+                <p>@cloths.Name</p>
+                <p>@cloths.Size</p>
+            </div>
 
-@foreach (var cloths in Model)
-{
-    <h1>@cloths.Id</h1>
-    <p>@cloths.Name</p>
-    <p>@cloths.Size</p>
-    <img src="~/Images/@cloths.ImageName" alt="@cloths.Name" class=" img-responsive" />
-}
+        }
+    </div>
 
+    </div>

@@ -39,6 +39,42 @@ namespace Website.Controllers
                     Id = 2,
                     Name = "Second Clothing",
                     Size = "Extra Large"
+                },
+                      new Clothing()
+                {
+                    Id = 1,
+                    Name = "First Clothing",
+                    Size = "Extra Large"
+                },
+                  new Clothing()
+                {
+                    Id = 2,
+                    Name = "Second Clothing",
+                    Size = "Extra Large"
+                },
+                      new Clothing()
+                {
+                    Id = 1,
+                    Name = "First Clothing",
+                    Size = "Extra Large"
+                },
+                  new Clothing()
+                {
+                    Id = 2,
+                    Name = "Second Clothing",
+                    Size = "Extra Large"
+                },
+                      new Clothing()
+                {
+                    Id = 1,
+                    Name = "First Clothing",
+                    Size = "Extra Large"
+                },
+                  new Clothing()
+                {
+                    Id = 2,
+                    Name = "Second Clothing",
+                    Size = "Extra Large"
                 }
 
             };
