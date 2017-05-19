@@ -93,12 +93,18 @@ namespace Website.Data
         {
             //the thing that it will search through is the whole site - all of the items that you are selecting 
 
-        //it will compate them based on their name 
+            //it will compate them based on their name 
 
-
-            return null;
+            List<Clothing> returnClothing = new List<Clothing>();
+            foreach (Clothing cloth in getProduct())
+            {
+                if (cloth.Name.Equals(searchString))
+                {
+                    returnClothing.Add(cloth);
+                }
+            }
+            return returnClothing;
         }
-
     }
 
     //what other 
