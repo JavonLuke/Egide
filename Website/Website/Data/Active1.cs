@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Website.Models;
 
 namespace Website.Data
 {
@@ -24,6 +25,68 @@ namespace Website.Data
 
             return returnActive ? "active" : "";
         }
+
+
+        public static Clothing[] getProduct()
+        {
+            Clothing[] clothing = new Clothing[]
+            {
+                new Clothing()
+                {
+                    Id = 1,
+                    Name = "Second Clothing",
+                    Size = "Extra Large"
+                },
+                  new Clothing()
+                {
+                    Id = 2,
+                                        Name = "Second Clothing",
+                    Size = "Extra Large"
+
+                },
+                      new Clothing()
+                {
+                    Id = 3,
+                    Name = "Second Clothing",
+                    Size = "Extra Large"
+                },
+                  new Clothing()
+                {
+                    Id = 2,
+                    Name = "Second Clothing",
+                    Size = "Extra Large"
+                },
+                      new Clothing()
+                {
+                    Id = 1,
+                    Name = "Second Clothing",
+                    Size = "Extra Large"
+                },
+                  new Clothing()
+                {
+                    Id = 2,
+                    Name = "Second Clothing",
+                    Size = "Extra Large"
+                },
+                      new Clothing()
+                {
+                    Id = 1,
+                    Name = "Second Clothing",
+                    Size = "Extra Large"
+                },
+                  new Clothing()
+                {
+                    Id = 2,
+                    Name = "Second Clothing",
+                    Size = "Extra Large"
+                }
+        };
+
+            return clothing;
+        }
+
     }
-   
+
+    //what other 
+
 }

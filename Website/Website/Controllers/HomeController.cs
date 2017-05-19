@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Website.Models;
+using Website.Data;
 
 namespace Website.Controllers
 {
@@ -26,60 +27,8 @@ namespace Website.Controllers
         {
             //ViewBag.Message = "Your application description page.";
             //The reason why this should be static is because, there should ever only be one master list.
-            var _clothing = new Clothing[]
-            {
-                new Clothing()
-                {
-                    Id = 1,
-                    Name = "Second Clothing",
-                    Size = "Extra Large"
-                },
-                  new Clothing()
-                {
-                    Id = 2,
-                                        Name = "Second Clothing",
-                    Size = "Extra Large"
-
-                },
-                      new Clothing()
-                {
-                    Id = 3,
-                    Name = "Second Clothing",
-                    Size = "Extra Large"
-                },
-                  new Clothing()
-                {
-                    Id = 2,
-                    Name = "Second Clothing",
-                    Size = "Extra Large"
-                },
-                      new Clothing()
-                {
-                    Id = 1,
-                    Name = "Second Clothing",
-                    Size = "Extra Large"
-                },
-                  new Clothing()
-                {
-                    Id = 2,
-                    Name = "Second Clothing",
-                    Size = "Extra Large"
-                },
-                      new Clothing()
-                {
-                    Id = 1,
-                    Name = "Second Clothing",
-                    Size = "Extra Large"
-                },
-                  new Clothing()
-                {
-                    Id = 2,
-                    Name = "Second Clothing",
-                    Size = "Extra Large"
-                }
-
-            };
-           
+            var _clothing = Active1.getProduct();
+                
 
 
             return View(_clothing);
