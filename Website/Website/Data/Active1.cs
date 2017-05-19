@@ -26,7 +26,11 @@ namespace Website.Data
             return returnActive ? "active" : "";
         }
 
-
+        public static Clothing getSingleProduct(int id)
+        {
+            Clothing[] clothing = getProduct();
+            return clothing[id];
+        }
         public static Clothing[] getProduct()
         {
             Clothing[] clothing = new Clothing[]
@@ -83,6 +87,16 @@ namespace Website.Data
         };
 
             return clothing;
+        }
+
+        public static System.Object search(string searchString)
+        {
+            //the thing that it will search through is the whole site - all of the items that you are selecting 
+
+        //it will compate them based on their name 
+
+
+            return null;
         }
 
     }

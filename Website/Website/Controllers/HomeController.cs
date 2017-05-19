@@ -12,6 +12,7 @@ namespace Website.Controllers
     {
         public ActionResult Index()
         {
+            //what I want is for you to select something and for it to populate, that particular Id that you select, 
             var clothing = new Clothing()
             {
                 Id = 1,
