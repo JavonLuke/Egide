@@ -12,7 +12,26 @@
 
        <style>body {
   position: relative;
-}</style>
+  
+}
+    footer{
+        background-color: grey;
+
+
+    }
+           .center {
+               
+
+           
+               float: none;
+               margin-left: auto;
+               margin-right: auto;
+           
+
+    }
+    
+    </style>
+
 </head>
 <body id="start" data-spy="scroll" data-target=".navbar">
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -27,12 +46,12 @@
                     <span class="icon-bar"></span>
                 </button>
             </div>
-            
-              
-           
+
+
+
 
             <div class="navbar-collapse collapse" id="nav">
-                
+
                 <ul class="nav navbar-nav">
 
                     <li class='@Html.IsActive("Home", "Index")'>@Html.ActionLink("Home1", "Index", "Home")</li>
@@ -41,48 +60,54 @@
                 </ul>
 
 
-                    
-                    <form class="navbar-form navbar-right">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search">
-                        </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
-                    </form>
-                        
-                
-                
+
+                <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+
+
+
             </div>
 
-         
 
-                            @*<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
 
-        </button>
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
+            @*<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
 
-        </button>
-
-             <div class="nav-item nav navbar-right">
-                <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#demo1">
-                    <img src="~/Images/brand.jpg" height="25" width="25" />
                 </button>
-            </div>
-                            *@
-              @*//Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })-->*@
-        
-            
-           
-         
-               
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+
+                </button>
+
+                     <div class="nav-item nav navbar-right">
+                        <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#demo1">
+                            <img src="~/Images/brand.jpg" height="25" width="25" />
+                        </button>
+                    </div>
+            *@
+            @*//Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })-->*@
+
+
+
+
+
         </div>
     </div>
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+
+       
+    
+
+
+    <p><button class="btn btn-danger pull-left">Log In</button>&copy; @DateTime.Now.Year - Javon's Frist Proper Website<button class="btn btn-danger pull-right">Your Bag</button></p>
+            <input type="text" class="form-control center" placeholder="Search for..." />
         </footer>
     </div>
 
