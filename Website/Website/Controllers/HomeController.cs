@@ -31,7 +31,20 @@ namespace Website.Controllers
                 new Clothing()
                 {
                     Id = 1,
-                    Name = "First Clothing",
+                    Name = "Second Clothing",
+                    Size = "Extra Large"
+                },
+                  new Clothing()
+                {
+                    Id = 2,
+                                        Name = "Second Clothing",
+                    Size = "Extra Large"
+
+                },
+                      new Clothing()
+                {
+                    Id = 3,
+                    Name = "Second Clothing",
                     Size = "Extra Large"
                 },
                   new Clothing()
@@ -43,7 +56,7 @@ namespace Website.Controllers
                       new Clothing()
                 {
                     Id = 1,
-                    Name = "First Clothing",
+                    Name = "Second Clothing",
                     Size = "Extra Large"
                 },
                   new Clothing()
@@ -55,19 +68,7 @@ namespace Website.Controllers
                       new Clothing()
                 {
                     Id = 1,
-                    Name = "First Clothing",
-                    Size = "Extra Large"
-                },
-                  new Clothing()
-                {
-                    Id = 2,
                     Name = "Second Clothing",
-                    Size = "Extra Large"
-                },
-                      new Clothing()
-                {
-                    Id = 1,
-                    Name = "First Clothing",
                     Size = "Extra Large"
                 },
                   new Clothing()
