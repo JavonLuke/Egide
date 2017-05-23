@@ -1,9 +1,38 @@
 ﻿@using Website.Data;
 @{
     ViewBag.Title = "Contact";
+    ViewBag.Name = "Name";
+    ViewBag.Price = 20;
 }
+
+<style>
+    .img-info {
+        margin: 20px;
+    }
+</style>
+
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
+
+<div class="container">
+<div class="container outline col-xs-6">
+   <img width="220" height="220" src="~/Images/first-clothingextra-large.jpg" class="img-responsive img-info">
+    
+    <div class="container pull-left">
+        <img width="50" height="50" src="~/Images/first-clothingextra-large.jpg" class="img-responsive img-info">
+        <img width="50" height="50" src="~/Images/first-clothingextra-large.jpg" class="img-responsive img-info">
+        <img width="50" height="50" src="~/Images/first-clothingextra-large.jpg" class="img-responsive img-info">
+        <img width="50" height="50" src="~/Images/first-clothingextra-large.jpg" class="img-responsive img-info">
+    </div>
+</div>
+
+<div class="container outline col-xs-6">
+    <p>Name: @ViewBag.Name</p>
+    <p>Price: @ViewBag.Price $</p>
+    <img width="220" height="220" src="~/Images/first-clothingextra-large.jpg" class="img-responsive pull-left img-info">
+</div>
+</div>
+
 
 <address>
     One Microsoft Way<br />
@@ -44,7 +73,7 @@
 <div class="container">
     <div class="row">
    
-    <img width="220" height="220" src="~/Images/first-clothingextra-large.jpg" class="img-responsive pull-left">
+    <img width="220" height="220" src="~/Images/first-clothingextra-large.jpg" class="img-responsive pull-left img-info">
        
         <p>           
             Lots of text here...With the four tiers of grids available you're bound to run into issues where,
