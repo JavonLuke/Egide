@@ -29,12 +29,24 @@ namespace Website.Data
         public static Clothing getSingleProduct(int id)
         {
             Clothing[] clothing = getProduct();
-            return clothing[id];
+            if (id < clothing.Length && id <= 0)
+            {
+                return clothing[id];
+            }
+            {
+                return null;
+            }
         }
         public static Clothing[] getProduct()
         {
             Clothing[] clothing = new Clothing[]
             {
+                 new Clothing()
+                {
+                    Id = 1,
+                    Name = "First Clothing",
+                    Size = "Extra Large"
+                },
                 new Clothing()
                 {
                     Id = 1,
@@ -44,7 +56,7 @@ namespace Website.Data
                   new Clothing()
                 {
                     Id = 2,
-                                        Name = "first",
+                                        Name = "Second Clothing",
                     Size = "Extra Large"
 
                 },

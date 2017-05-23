@@ -5,11 +5,21 @@
     ViewBag.Title = "Contact";
     ViewBag.Name = "Name";
     ViewBag.Price = 20;
+    ViewBag.SearchString = "First Clothing";
 }
 
 <style>
     .img-info {
         margin: 20px;
+    }
+
+    outline{
+        border: solid;
+        border-width: 5px;
+        border-color: black;
+        border-bottom: double;
+        
+
     }
 </style>
 
@@ -17,11 +27,8 @@
 <h3>@ViewBag.Message</h3>
 @*This is for the search page, it will go through and populate all of the names that equal the word that was typed in*@
 <div class="container">
-    
-    @foreach (var item in Active1.search("first"))
-    {
-        if (item.Name.Equals("first"))
-        {
+    @foreach (var item in Active1.search(ViewBag.SearchString))
+    {       
             <div class="col-xs-6 col-sm-6 col-md-4">
                 <div class="container merch">
                     <h1>@item.Id</h1>
@@ -32,12 +39,7 @@
                     </div>
                 </div>
             </div>
-        }
-
     }
-
-
-
 </div>
 
 
@@ -46,7 +48,7 @@
 
 
 @*This is for the individual search page for each item*@
-<div class="container">
+<div class="row">
 <div class="container outline col-xs-6">
    <img width="220" height="220" src="~/Images/first-clothingextra-large.jpg" class="img-responsive img-info">
     
@@ -80,7 +82,7 @@
         </a>
     </div>
     <div class="media-body">
-        <p>
+        <p class="outline">
             Lots of text here...With the four tiers of grids available you're bound to run into issues where,
             at certain breakpoints, your columns don't clear quite right as one is taller than the other. To fix that, use a
             combination of a .clearfix and oLots of text here...With the four tiers of grids available you're bound to run into issues where,
