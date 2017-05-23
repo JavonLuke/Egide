@@ -1,4 +1,6 @@
 ﻿@using Website.Data;
+@using Website.Models;
+
 @{
     ViewBag.Title = "Contact";
     ViewBag.Name = "Name";
@@ -13,7 +15,37 @@
 
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
+@*This is for the search page, it will go through and populate all of the names that equal the word that was typed in*@
+<div class="container">
+    
+    @foreach (var item in Active1.search("first"))
+    {
+        if (item.Name.Equals("first"))
+        {
+            <div class="col-xs-6 col-sm-6 col-md-4">
+                <div class="container merch">
+                    <h1>@item.Id</h1>
+                    <img src="~/Images/@item.ImageName" alt="@item.Name" class="img-responsive merch-img" height="100" width="100" />
+                    <div class="merch-info">
+                        <p class="merch-name">@item.Name</p>
+                        <p class="merch-size">@item.Size</p>
+                    </div>
+                </div>
+            </div>
+        }
 
+    }
+
+
+
+</div>
+
+
+
+
+
+
+@*This is for the individual search page for each item*@
 <div class="container">
 <div class="container outline col-xs-6">
    <img width="220" height="220" src="~/Images/first-clothingextra-large.jpg" class="img-responsive img-info">

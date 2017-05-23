@@ -44,7 +44,7 @@ namespace Website.Data
                   new Clothing()
                 {
                     Id = 2,
-                                        Name = "Second Clothing",
+                                        Name = "first",
                     Size = "Extra Large"
 
                 },
