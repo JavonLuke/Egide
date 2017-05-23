@@ -89,7 +89,7 @@ namespace Website.Data
             return clothing;
         }
 
-        public static System.Object search(string searchString)
+        public static List<Clothing> search(string searchString)
         {
             //the thing that it will search through is the whole site - all of the items that you are selecting 
 
