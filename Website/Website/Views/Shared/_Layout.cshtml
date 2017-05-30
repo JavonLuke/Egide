@@ -29,81 +29,107 @@
            
 
     }
-    
+
+           .collapse {
+               align-content: center;
+               margin: auto;
+           }
+           .divcontainer {
+               width: 100%;
+               position: relative;
+               
+               list-style-type: none;
+               align-content: center;
+               margin: auto;
+           }
+           .hello {
+               width: 25%;
+               text-align: center;
+               margin: auto;
+           }
+           .line{
+               height:0;
+               display: block;
+               border-bottom: 2px solid;
+               
+               border-bottom-color: black;
+               width: inherit;
+                
+
+           }
     </style>
 
 </head>
 <body id="start" data-spy="scroll" data-target=".navbar">
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+    <div class="container">
+        <div class="nav navbar">     
             <div class="navbar-header">
-                <div class=" navbar-brand">Egide's Website<img src="~/Images/brand.jpg" height="25" width="25" /></div>
-
-
+                <a class="navbar-brand"><img src="~/Images/brand.jpg" height="25" width="25" /></a>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
             </div>
+            
+                <div class="navbar-collapse collapse" id="nav">
+                    <ul class="divcontainer nav-pills nav">
+                        <li class='hello @Html.IsActive("Home", "Index")'>@Html.ActionLink("Home1", "Index", "Home")</li>
+                        <li class='hello @Html.IsActive("Home", "About")'>@Html.ActionLink("About2", "About", "Home")</li>
+                        <li class='hello @Html.IsActive("Home", "Contact")'>@Html.ActionLink("Contact3", "Contact", "Home")</li>
+                        <li class="line">
 
 
+                        </li>
+                    </ul>
+                   
+               </div>
+           
+        </div>
+    </div>
 
 
-            <div class="navbar-collapse collapse" id="nav">
+            @*
 
-                <ul class="nav navbar-nav">
-
-                    <li class='@Html.IsActive("Home", "Index")'>@Html.ActionLink("Home1", "Index", "Home")</li>
-                    <li class='@Html.IsActive("Home", "About")'>@Html.ActionLink("About2", "About", "Home")</li>
-                    <li class='@Html.IsActive("Home", "Contact")'>@Html.ActionLink("Contact3", "Contact", "Home")</li>
-                </ul>
+            
 
 
-
-                <form class="navbar-form navbar-right">
+          <form class="navbar-form navbar-right">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Search">
                     </div>
                     <button type="submit" class="btn btn-default">Submit</button>
                 </form>
 
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
 
+        </button>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
 
+        </button>
+
+             <div class="nav-item nav navbar-right">
+                <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#demo1">
+                    <img src="~/Images/brand.jpg" height="25" width="25" />
+                </button>
             </div>
-
-
-
-            @*<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-
-                </button>
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-
-                </button>
-
-                     <div class="nav-item nav navbar-right">
-                        <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#demo1">
-                            <img src="~/Images/brand.jpg" height="25" width="25" />
-                        </button>
-                    </div>
             *@
-            @*//Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })-->*@
+    @*//Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })-->*@
 
 
 
 
 
-        </div>
-    </div>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>   
+        <footer>
 
 
-    <button class="btn btn-danger pull-left">Log In</button>&copy; @DateTime.Now.Year - Javon's Frist Proper Website<button class="btn btn-danger pull-right">Your Bag</button>
+            <button class="btn btn-danger pull-left">Log In</button>&copy; @DateTime.Now.Year - Javon's Frist Proper Website<button class="btn btn-danger pull-right">Your Bag</button>
             <input type="text" class="form-control center" placeholder="Search for..." />
         </footer>
     </div>
